@@ -1,0 +1,9 @@
+{
+  "name": "replay-theater",
+  "version": "0.1.0",
+  "description": "After Claude edits files, a Replay button steps through each edit as a before/after diff. No model calls; the last 60 edits are kept across sessions.",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "Kevin Factor"
+  }
+}

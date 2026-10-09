@@ -1,0 +1,36 @@
+{
+  "name": "claude-kit",
+  "owner": {
+    "name": "Kevin Factor"
+  },
+  "metadata": {
+    "description": "The X Factor kit: safety and visibility mods for Claude Code beginners."
+  },
+  "plugins": [
+    {
+      "name": "kit-guide",
+      "source": "./plugins/kit-guide",
+      "description": "Explains the X Factor kit: a one-time welcome above the prompt and /kit, a pane listing what each mod does and how to use it."
+    },
+    {
+      "name": "blast-radius",
+      "source": "./plugins/blast-radius",
+      "description": "Stops destructive shell commands, lists exactly what they would delete or discard, and waits for a person to press Approve."
+    },
+    {
+      "name": "file-tree",
+      "source": "./plugins/file-tree",
+      "description": "A right-side pane showing, live, which files Claude is reading, editing and committing. No model calls; history kept across sessions."
+    },
+    {
+      "name": "replay-theater",
+      "source": "./plugins/replay-theater",
+      "description": "After Claude edits files, a Replay button steps through each edit as a before/after diff. No model calls; the last 60 edits are kept across sessions."
+    },
+    {
+      "name": "cash-tax",
+      "source": "./plugins/cash-tax",
+      "description": "Warns before an idle session's prompt cache expires and the next message re-reads the whole conversation at full price, with the token count and cost. /keepwarm pings the cache to keep it alive."
+    }
+  ]
+}

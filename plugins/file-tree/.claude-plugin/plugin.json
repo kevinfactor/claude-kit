@@ -1,0 +1,9 @@
+{
+  "name": "file-tree",
+  "version": "0.1.0",
+  "description": "A right-side pane showing, live, which files Claude is reading, editing and committing. No model calls; history kept across sessions.",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "Kevin Factor"
+  }
+}

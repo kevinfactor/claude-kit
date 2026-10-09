@@ -1,0 +1,53 @@
+{
+  "name": "cash-tax",
+  "version": "0.1.0",
+  "description": "Warns before an idle session's prompt cache expires and the next message re-reads the whole conversation at full price, with the token count and cost. /keepwarm pings the cache to keep it alive.",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "ttlMinutes": {
+      "type": "number",
+      "title": "Cache lifetime (minutes)",
+      "description": "How long the prompt cache lives after the last request. Claude Code on a subscription uses 60; API-key sessions often 5.",
+      "default": 60
+    },
+    "warnMinutes": {
+      "type": "number",
+      "title": "Warn this many minutes before expiry",
+      "description": "When the band above the prompt appears.",
+      "default": 10
+    },
+    "writePerMTok": {
+      "type": "number",
+      "title": "Cache write price, $ per million tokens",
+      "description": "What a cold reload costs. Claude Opus 5.5 with a 1-hour cache: 8 (2x the $4 input price).",
+      "default": 8
+    },
+    "readPerMTok": {
+      "type": "number",
+      "title": "Cache read price, $ per million tokens",
+      "description": "What a warm message or a keep-warm ping costs. Claude Opus 5.5: 0.20.",
+      "default": 0.2
+    },
+    "minTokens": {
+      "type": "number",
+      "title": "Ignore conversations smaller than this many tokens",
+      "description": "Below this a cold reload is cheap enough not to mention.",
+      "default": 30000
+    },
+    "confirmCold": {
+      "type": "boolean",
+      "title": "Hold the first message after expiry for confirmation",
+      "description": "On: the first message after the cache expired is put back in the box with the cost; press Enter again to send it.",
+      "default": true
+    },
+    "maxPings": {
+      "type": "number",
+      "title": "Keep-warm stops after this many pings",
+      "description": "So /keepwarm never runs all night unnoticed.",
+      "default": 6
+    }
+  },
+  "author": {
+    "name": "Kevin Factor"
+  }
+}

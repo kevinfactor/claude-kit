@@ -1,0 +1,9 @@
+{
+  "name": "kit-guide",
+  "version": "0.1.0",
+  "description": "Explains the X Factor kit: a one-time welcome above the prompt and /kit, a pane listing what each mod does and how to use it.",
+  "author": {
+    "name": "Kevin Factor"
+  },
+  "types": "./types/index.d.ts"
+}

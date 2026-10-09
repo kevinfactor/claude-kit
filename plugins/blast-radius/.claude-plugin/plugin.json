@@ -1,0 +1,17 @@
+{
+  "name": "blast-radius",
+  "version": "0.1.0",
+  "description": "Stops destructive shell commands, lists exactly what they would delete or discard, and waits for a person to press Approve.",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "strict": {
+      "type": "boolean",
+      "title": "Hold every delete",
+      "description": "On: even deleting one file waits for your approval. Good for beginners. Off: a single plain file goes through; folders, wildcards and bulk deletes are held.",
+      "default": false
+    }
+  },
+  "author": {
+    "name": "Kevin Factor"
+  }
+}
